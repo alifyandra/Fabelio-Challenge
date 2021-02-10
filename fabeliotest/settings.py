@@ -22,6 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'zg=o@9ed%8-vj04uyo9+#&_zo*@jf=4$iv(u!alac8zh*0*8mf'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -76,12 +78,17 @@ WSGI_APPLICATION = 'fabeliotest.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+DATABASE_URL = "postgres://yshabwomlhrnpw:7df2278682d3b8c08c9a2c5578d8b8d78b8c1ca2931617fa905cf84f5983f7d3@ec2-34-230-167-186.compute-1.amazonaws.com:5432/dfa9eusacvu3bq"
+DATABASES = {}
+DATABASES["default"] = dj_database_url.config(default = DATABASE_URL)
+# DATABASES["default"]["OPTIONS"] = {'options':'-c search_path=silau,public'}
 
 PRODUCTION = os.environ.get('DATABASE_URL') is not None
 if PRODUCTION:

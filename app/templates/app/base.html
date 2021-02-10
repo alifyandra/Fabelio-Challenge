@@ -31,6 +31,25 @@
         {% else %}
         <title>Fabelio Internship</title>
         {% endif %}
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script type="text/javascript">
+            function uuidv4() {
+                return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+                    /[xy]/g,
+                    (c) => {
+                        var r = (Math.random() * 16) | 0,
+                            v = c == "x" ? r : (r & 0x3) | 0x8;
+                        return v.toString(16);
+                    }
+                );
+            }
+
+            let device = Cookies.get("device");
+
+            device = !device ? uuidv4() : device;
+
+            document.cookie = "device=" + device + ";domain=;path=/";
+        </script>
     </head>
     <body>
         <!-- As a heading -->
