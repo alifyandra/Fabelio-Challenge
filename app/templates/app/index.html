@@ -1,16 +1,20 @@
 {%extends 'app/base.html'%} {% block content %} {% load static %}
 <div class="container">
-    <h1>Fabelio</h1>
+    <h1>For you</h1>
 </div>
 <div class="container">
     {% for p in products %}
-    <h3>{{p.name}}</h3>
-    <p>{{p.price}}</p>
-    <p>{{p.dimension}}</p>
-    <p>{{p.colours}}</p>
-    <p>{{p.material}}</p>
-    <img src="{{p.image}}" alt="" />
-    {% endfor %}
+    <div class="container">
+        <h3>{{p.name}}</h3>
+        <p>Rp. {{p.price}}</p>
+        <p>{{p.dimension}}</p>
+        <p>{{p.colours}}</p>
+        <p>{{p.material}}</p>
+        <img
+            src="{{p.image}}"
+            alt="{{p.name}} image"
+            style="max-width: 100%; height: auto"
+        />
+    </div>
 </div>
-
-{% endblock content %}
+{% endfor %} {% endblock content %}
