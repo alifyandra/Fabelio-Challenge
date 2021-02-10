@@ -45,10 +45,13 @@
             }
 
             let device = Cookies.get("device");
-
+            let first_time = !device ? true : false;
             device = !device ? uuidv4() : device;
 
             document.cookie = "device=" + device + ";domain=;path=/";
+            if (first_time) {
+                location.reload(true);
+            }
         </script>
     </head>
     <body>

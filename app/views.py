@@ -7,6 +7,10 @@ def index(request):
     try:
         customer = request.user.customer
     except:
+        try:
+            device = request.COOKIES['device']
+        except:
+            return render(request, 'app/index.html', {'products':[],'product':[]})
         device = request.COOKIES['device']
         customer, created = Customer.objects.get_or_create(device=device)
     
@@ -33,3 +37,5 @@ def index(request):
     customer.save()
 
     return render(request, 'app/index.html', {'products':similar_sorted,'product':similar_sorted[0]})  
+
+# def createCookie(request):
