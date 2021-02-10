@@ -20,6 +20,11 @@
             type="text/css"
             href="{% static 'app/css/styles.css' %}"
         />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'app/css/navbar.css' %}"
+        />
         <!-- title djtag -->
         {% if title %}
         <title>{{ title }}</title>
@@ -28,6 +33,12 @@
         {% endif %}
     </head>
     <body>
+        <!-- As a heading -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Fabelio</span>
+            </div>
+        </nav>
         {% block content %} {% endblock content %}
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
