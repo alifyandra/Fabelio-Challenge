@@ -6,6 +6,15 @@ This is a Django Website that displays a single product that changes with every 
 
 The similarity between the next products with the previously seen product is judged by using the Python difflib library and summing the SequencerMatcher ratio between the string attributes of the Product relation.
 
+```Python
+similar_sorted = sorted(filtered, key=lambda x:
+        difflib.SequenceMatcher(None,x.name,last_seen.name).ratio()+
+        difflib.SequenceMatcher(None,x.colours,last_seen.colours).ratio()+
+        difflib.SequenceMatcher(None,x.material,last_seen.material).ratio(), reverse=True)
+```
+
+
+
 ##### This a sample of the database scheme for relation Product:
 
 | **id** | **product name**        | **price** | **dimension** | **colours**                                  | **material** |
