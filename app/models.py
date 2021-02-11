@@ -29,5 +29,3 @@ class Customer(models.Model):
         else:
             name = self.device
         return str(name)
-# class User(models.model):
-#     uid = models.TextField()
