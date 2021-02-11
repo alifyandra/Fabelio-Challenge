@@ -30,7 +30,7 @@ The customer relation holds a user, name, email attribute just in case you would
 
 Given the 24 hours to complete this challenge, it was quite fun. I applied my knowledge in databases and got to learn more about cookies and sessions. 
 
-If I had more time I would of certainly used React as the frontend, but because I've never really combined Django and React, it was very complicated and risky to try for the 24 hours. The reason I used Django was because I was more comfortable and familiar with the ORM feature that Django has compared to using Node.js.
+If I had more time I would of certainly used React as the frontend, but because I've never really combined Django and React, it was very complicated and risky to try for the 24 hours. The reason I used Django was because I was more comfortable and familiar with the ORM feature that Django has compared to using Node.js, if I would do this project in my free time I would of certainly also used Node and Express as the backend.
 
 Hit me up at alifyandra@gmail.com or connect with me at https://www.linkedin.com/in/alifyandra/
 
