@@ -23,7 +23,7 @@ similar_sorted = sorted(filtered, key=lambda x:
 | **2**  | Sofa Tempat Tidur Mochi | 3500000   | 160 x 95 x 90 | custard vienna, graphite vienna, ruby vienna | solid wood   |
 | **3**  | Sofa 2 dudukan Zelado   | 4299000   | 162 x 95 x 86 | graphite vienna, teal vienna                 | hollow steel |
 
-To store what the user has seen and has not seen, everytime a new anonymous user opens the website, a 'device' cookie is created in the form of UUIDv4. This cookie is then parsed in the django views and created as a new Customer relation with a device attribute that holds that previous cookie, this Customer relation has an attribute that holds an array of the id's of all seen products. 
+The RDBMS used in this project is PostgreSQL. To store what the user has seen and has not seen, everytime a new anonymous user opens the website, a 'device' cookie is created in the form of UUIDv4. This cookie is then parsed in the django views and created as a new Customer relation with a device attribute that holds that previous cookie, this Customer relation has an attribute that holds an array of the id's of all seen products. 
 
 The customer relation holds a user, name, email attribute just in case you would like to convert the anonymous user into a proper user in the database in the future.
 
