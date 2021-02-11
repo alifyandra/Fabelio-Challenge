@@ -38,8 +38,14 @@
             </div>
         </div>
     </div>
+    {% endif %}
+    <div class="container" style="padding: 1em; text-align: center">
+        <a href="{% url 'index' %}">
+            <button class="btn btn-dark btn-sm">Next</button></a
+        >
+    </div>
 
-    {% endif %} {% if products %}
+    {% if products %}
     <div class="similar-box container">
         <h4>Next Similar Products</h4>
         <div class="card-columns">
