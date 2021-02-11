@@ -8,18 +8,11 @@ The similarity between the next products with the previously seen product is jud
 
 ##### This a sample of the database scheme for relation Product:
 
-| **id** | **product name**         | **price** | **dimension** | **colours**                                  | **material** | **image**                                                    | **sold** |
-| ------ | ------------------------ | --------- | ------------- | -------------------------------------------- | ------------ | ------------------------------------------------------------ | -------- |
-| **1**  | Sofa 2 dudukan Vienna    | 3899000   | 162 x 95 x 86 | custard vienna, graphite vienna, ruby vienna | solid wood   | https://fabelio.com/media/catalog/product/w/i/wina_2_seater_sofa__custard__1_1.jpg | t        |
-| **2**  | Sofa Tempat Tidur Mochi  | 3500000   | 160 x 95 x 90 | custard vienna, graphite vienna, ruby vienna | solid wood   | https://fabelio.com/media/catalog/product/r/2/r2710.jpg      | f        |
-| **3**  | Sofa 2 dudukan Zelado    | 4299000   | 162 x 95 x 86 | graphite vienna, teal vienna                 | hollow steel | https://fabelio.com/media/catalog/product/z/e/zelado-2-seater-sofa---custard-01.jpg | f        |
-| **4**  | Sofa 2 dudukan Toril     | 2899000   | 160 x 95 x 90 | blue jay, ruby vienna                        | solid wood   | https://fabelio.com/media/catalog/product/t/o/Toril_2_Seater_Sofa_(Paradise)_1.jpg | f        |
-| **5**  | Sofa Tempat Tidur Deacon | 3299000   | 150 x 90 x 80 | custard vienna, graphite vienna              | hollow steel | https://fabelio.com/media/catalog/product/d/e/deacon_white_1_1_1.jpg | f        |
-| **6**  | Sofa Java                | 3869100   | 142 x 90 x 80 | custard vienna, graphite vienna              | solid wood   | https://fabelio.com/media/catalog/product/t/a/Taby_Java_2_Seater_Living_Set_(Sugar)_1.jpg | f        |
-| **7**  | Sofa 1 dudukan Hughes    | 2500000   | 90 x 82 x 58  | custard vienna, graphite vienna, ruby vienna | solid wood   | https://fabelio.com/media/catalog/product/h/u/Hughes_Armchair_(Wood)_0.jpg | f        |
-| **8**  | Sofa 1 dudukan Taby      | 2399000   | 90 x 82 x 58  | brown vienna, ruby vienna                    | solid wood   | https://fabelio.com/media/catalog/product/t/a/Taby_Armchair_(Jezebel)_1.jpg | f        |
-| **9**  | Sofa 1 dudukan Zoey      | 2399000   | 90 x 82 x 58  | brown vienna, ruby vienna                    | hollow steel | https://fabelio.com/media/catalog/product/k/u/Kursi_Zoey_Armchair_(Brown)_0.jpg | f        |
-| **10** | Sofa 1 dudukan Vienna    | 2199000   | 90 x 82 x 58  | custard vienna, graphite vienna, ruby vienna | solid wood   | https://fabelio.com/media/catalog/product/w/i/wina_armchair__graphite__1_1.jpg | f        |
+| **id** | **product name**        | **price** | **dimension** | **colours**                                  | **material** |
+| ------ | ----------------------- | --------- | ------------- | -------------------------------------------- | ------------ |
+| **1**  | Sofa 2 dudukan Vienna   | 3899000   | 162 x 95 x 86 | custard vienna, graphite vienna, ruby vienna | solid wood   |
+| **2**  | Sofa Tempat Tidur Mochi | 3500000   | 160 x 95 x 90 | custard vienna, graphite vienna, ruby vienna | solid wood   |
+| **3**  | Sofa 2 dudukan Zelado   | 4299000   | 162 x 95 x 86 | graphite vienna, teal vienna                 | hollow steel |
 
 To store what the user has seen and has not seen, everytime a new anonymous user opens the website, a 'device' cookie is created in the form of UUIDv4. This cookie is then parsed in the django views and created as a new Customer relation with a device attribute that holds that previous cookie, this Customer relation has an attribute that holds an array of the id's of all seen products. 
 
