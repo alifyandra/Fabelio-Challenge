@@ -29,9 +29,9 @@ The customer relation holds a user, name, email attribute just in case you would
 
 #### Here is the schema of the Customer relation:
 
-| user                      | name   | email  | device         | seen    |
-| ------------------------- | ------ | ------ | -------------- | ------- |
-| Django inherited User obj | String | String | String(UUIDv4) | Boolean |
+| user                      | name   | email  | device         | seen      |
+| ------------------------- | ------ | ------ | -------------- | --------- |
+| Django inherited User obj | String | String | String(UUIDv4) | Int Array |
 
 
 
