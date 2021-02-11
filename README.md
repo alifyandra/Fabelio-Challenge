@@ -21,11 +21,25 @@ The similarity between the next products with the previously seen product is jud
 | **9**  | Sofa 1 dudukan Zoey      | 2399000   | 90 x 82 x 58  | brown vienna, ruby vienna                    | hollow steel | https://fabelio.com/media/catalog/product/k/u/Kursi_Zoey_Armchair_(Brown)_0.jpg | f        |
 | **10** | Sofa 1 dudukan Vienna    | 2199000   | 90 x 82 x 58  | custard vienna, graphite vienna, ruby vienna | solid wood   | https://fabelio.com/media/catalog/product/w/i/wina_armchair__graphite__1_1.jpg | f        |
 
-To store what the user has seen and has not seen, everytime a new anonymous user opens the website, a 'device' cookie is created in the form of UUIDv4. This cookie is then parsed in the django views and created as a new Customer relation with a device attribute that holds that previous cookie, this Customer relation has an attribute that holds an array of the id's of all seen products.
+To store what the user has seen and has not seen, everytime a new anonymous user opens the website, a 'device' cookie is created in the form of UUIDv4. This cookie is then parsed in the django views and created as a new Customer relation with a device attribute that holds that previous cookie, this Customer relation has an attribute that holds an array of the id's of all seen products. 
+
+The customer relation holds a user, name, email attribute just in case you would like to convert the anonymous user into a proper user in the database in the future.
+
+##### Here is the schema of the Customer relation:
+
+| user                      | name   | email  | device         | seen    |
+| ------------------------- | ------ | ------ | -------------- | ------- |
+| Django inherited User obj | String | String | String(UUIDv4) | Boolean |
+
+
 
 #### Things I would add:
 
-Given the 24 hours to complete this challenge, it was quite fun and I applied my knowledge in databases and got to learn more about cookies and sessions. 
+Given the 24 hours to complete this challenge, it was quite fun. I applied my knowledge in databases and got to learn more about cookies and sessions. 
 
-If I was given more time I would of certainly used React as the frontend, but because I've never really combined Django and React, it was very complicated and risky to try for the 24 hours. The reason I used Django was because I was more comfortable and familiar with the ORM feature that Django has compared to using Node.js.
+If I had more time I would of certainly used React as the frontend, but because I've never really combined Django and React, it was very complicated and risky to try for the 24 hours. The reason I used Django was because I was more comfortable and familiar with the ORM feature that Django has compared to using Node.js.
+
+Hit me up at alifyandra@gmail.com or connect with me at https://www.linkedin.com/in/alifyandra/
+
+Cheers! 👋
 
