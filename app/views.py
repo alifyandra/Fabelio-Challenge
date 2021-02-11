@@ -15,7 +15,7 @@ def index(request):
         customer, created = Customer.objects.get_or_create(device=device)
     
     seen = customer.seen
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('id')
     filtered = [x for x in products if x.id not in seen]
     last_seen_id = seen[-1] if seen else 1
 
@@ -36,6 +36,6 @@ def index(request):
         customer.seen = []
     customer.save()
 
-    return render(request, 'app/index.html', {'products':similar_sorted,'product':similar_sorted[0]})  
+    return render(request, 'app/index.html', {'products':similar_sorted[1:],'product':similar_sorted[0], "last_product":last_seen, 'first_product':True if len(seen) == 1 else False})  
 
 # def createCookie(request):
