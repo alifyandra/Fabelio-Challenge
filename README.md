@@ -15,7 +15,7 @@ similar_sorted = sorted(filtered, key=lambda x:
 
 
 
-##### This a sample of the database scheme for relation Product:
+#### This a sample of the database scheme for relation Product:
 
 | **id** | **product name**        | **price** | **dimension** | **colours**                                  | **material** |
 | ------ | ----------------------- | --------- | ------------- | -------------------------------------------- | ------------ |
@@ -27,7 +27,7 @@ The RDBMS used in this project is PostgreSQL. To store what the user has seen an
 
 The customer relation holds a user, name, email attribute just in case you would like to convert the anonymous user into a proper user in the database in the future.
 
-##### Here is the schema of the Customer relation:
+#### Here is the schema of the Customer relation:
 
 | user                      | name   | email  | device         | seen    |
 | ------------------------- | ------ | ------ | -------------- | ------- |
