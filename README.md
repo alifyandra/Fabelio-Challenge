@@ -1,6 +1,6 @@
 # Fabelio Challenge
 
-#### [Website Link](https://alifyandra-fabelio.herokuapp.com)
+#### [Website Link](https://fabelio-alifyandra.herokuapp.com)
 
 This is a Django Website that displays a single product that changes with every refresh, the next product is based on the similarity with the previous product. A user won't see the same product twice unless the user has seen all products in the database.
 
