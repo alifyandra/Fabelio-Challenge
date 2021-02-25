@@ -1,4 +1,4 @@
-# Fabelio Internship Challenge
+# Fabelio Challenge
 
 #### [Website Link](alifyandra-fabelio.herokuapp.com)
 
